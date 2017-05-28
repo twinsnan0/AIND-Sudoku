@@ -2,12 +2,18 @@
 ## Introductory Project: Diagonal Sudoku Solver
 
 # Question 1 (Naked Twins)
-Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+Q: How do we use constraint propagation to solve the naked twins problem?
+A: As we found that left value in a unit can not get the value of naked twins have, the constraint will help us reducing the iteration steps
+Check all the unit in the unit list, then find the two boxes with the same value in each unit, finally replace the char of the value in the left boxes in the unit.
+It will iteratively narrows the search space of possible solutions
+Finally we get the right result with less steps
 
 # Question 2 (Diagonal Sudoku)
-Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+Q: How do we use constraint propagation to solve the diagonal sudoku problem?
+A: Different from Common sudoku problem, diagonal sudoku has another two constraint condition same with the column constraints.
+So at the first, we need to add two units as the extra constraint to the unit list.
+When solving the problem, the Eliminate Strategy, Only Choice Strategy, Naked Twins Strategy have to consider to fit the condition that diagonal's value can not be the same.
+At last, the result of the values will meet requirements of diagonal sudoku.
 
 ### Install
 
